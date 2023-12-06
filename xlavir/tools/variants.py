@@ -189,6 +189,7 @@ VCF_SAMPLE_NAME_CLEANUP = [
     re.compile(r'\.0\.\d+AF(\.filt)?'),
     re.compile(r'\.medaka'),
     re.compile(r'\.longshot'),
+    re.compile(r'\.clair3\.fix'),
     re.compile(r'\.clair3'),
     re.compile(r'\.snpeff'),
     re.compile(r'\.no_fs'),
@@ -246,7 +247,7 @@ def read_vcf(vcf_file: Path) -> Tuple[str, pd.DataFrame]:
         variant_caller = ''
         for line in fh:
             if line.startswith('##source='):
-                variant_caller = line.strip().replace('##source=', '')
+                variant_caller = line.strip().replace('##source=', '').lower()
             if line.startswith('##bcftools_callVersion'):
                 variant_caller = 'bcftools'
             if line.startswith('##nanopolish'):

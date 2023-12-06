@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 1.0.2 (2023-12-06)
+
+* All VCF source tool names are converted to lowercase
+
 ## 1.0.1 (2023-11-28)
 
 * Fix issue with PyPI installation
