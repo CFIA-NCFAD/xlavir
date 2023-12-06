@@ -165,8 +165,8 @@ class VariantStats(BaseModel):
 
 @dataclass
 class VariantCaller:
-    iVar = 'iVar'
-    Longshot = 'Longshot'
+    iVar = 'ivar'
+    Longshot = 'longshot'
     Nanopolish = 'nanopolish'
     Medaka = 'medaka'
     Clair3 = 'clair3'
